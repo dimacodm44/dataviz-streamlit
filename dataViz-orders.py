@@ -3,7 +3,6 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-import matplotlib as pl
 import seaborn as sns
 import plotly.express as px
 
@@ -26,7 +25,7 @@ Categories = df['Category'].value_counts()
 fig = plt.figure(figsize=(15,8))
 plt.plot(Categories, 'bo--',c='b',lw=3, marker ='.',markersize =15,ls='--')
 plt.title('Orders by Category', fontsize=15)
-plt.xlabel('Categort')
+plt.xlabel('Category')
 plt.ylabel('Orders')
 st.pyplot(fig)
 
@@ -52,7 +51,7 @@ st.pyplot(fig)
 # ## Orders by Status
 
 status = df['Status'].value_counts()
-fig = plt.figure(figsize=(15,8))
+fig = plt.figure(figsize=(5,8))
 
 
 mylabels = status.values / status.values.sum()*100
